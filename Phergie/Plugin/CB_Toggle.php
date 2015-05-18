@@ -12,9 +12,15 @@ class Phergie_Plugin_CB_Toggle extends Phergie_Plugin_Abstract
     public function validCommand($plugin = null)
     {
         $commands = array(
-                    "Bunny",
-                    "Cookie",
-                    "Say",
+                  "Bunny",
+                  "Cookie",
+                  "Say",
+					"Quit",
+					"Join",
+					"Part",
+					"Op",
+					"Voice",
+					"Kick",
                 );
                 
         if ($plugin === null)
@@ -51,6 +57,7 @@ class Phergie_Plugin_CB_Toggle extends Phergie_Plugin_Abstract
 	    			$out[$command] = $command . " = " . $this->plugins->$c->getToggle() . "\x0F";
 	    		}
 	    		
+				$this->plugins->send->send($source, "Current Command States:");
 	    		$this->plugins->send->send($source, implode(" - ", $out), $nick);
 	    	}
 	    	else if ($this->validCommand($plugin))

@@ -10,7 +10,7 @@ return array(
             'port' => 6667,
             'username' => 'BOT~',
             'realname' => '[CookieBot]',
-            'nick' => '[CookieBot]',
+            'nick' => '[CookieBotDev]',
             // 'password' => 'password goes here if needed',
             // 'transport' => 'ssl', // uncomment to connect using SSL
             // 'encoding' => 'UTF-8', // uncomment if using UTF-8
@@ -36,6 +36,12 @@ return array(
 		'CB_Toggle',
 		'CB_Cookie',
 		'CB_Say',
+		'CB_Quit',
+		'CB_Join',
+		'CB_Part',
+		'CB_Op',
+		"CB_Voice",
+		"CB_Kick",
     ),
 
     // If set to true, this allows any plugin dependencies for plugins
@@ -47,7 +53,7 @@ return array(
     'ui.enabled' => true,
 
     // Examples of a prefix for command-based plugins
-    'command.prefix' => '[CookieBot]',
+    'command.prefix' => 'CookieBot',
     // If you uncomment the line above, this would invoke onCommandJoin 
     // in the Join plugin: !join #channel
     // By default, no prefix is assumed, so the same command would be 
@@ -118,7 +124,7 @@ return array(
 	// Below is a list of outputs that will be used if there is an error.
 	
 	// If the user running the command doesn't have the permissions to do so
-	'error.noperms' => "\x0304Im sorry but I dont think you're allowed to do that :<",
+	'error.noperms' => "*Throws Cookies* No!",
 	
 	// For random errors that i really dont see a way of catogorising (Revise Spellings!)
 	'error.misc' => "\x0304Sorry but I can't work out what just happened. Did you break something?",
